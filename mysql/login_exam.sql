@@ -28,13 +28,14 @@ CREATE TABLE IF NOT EXISTS `tbl_function` (
   PRIMARY KEY (`function_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
--- Dumping data for table login_exam.tbl_function: ~3 rows (approximately)
+-- Dumping data for table login_exam.tbl_function: ~4 rows (approximately)
 DELETE FROM `tbl_function`;
 /*!40000 ALTER TABLE `tbl_function` DISABLE KEYS */;
 INSERT INTO `tbl_function` (`function_id`, `description`, `function_code`, `function_name`, `function_order`, `function_url`, `status`) VALUES
-	(1, 'xemTin1', 'xem_tin_1', 'xem_tin_1', 1, '/xem_tin_1', 1),
-	(2, 'xemTin2', 'xem_tin_2', 'xem_tin_2', 2, '/xem_tin_2', 1),
-	(3, 'xemTin3', 'xem_tin_3', 'xem_tin_3', 3, '/xem_tin_3', 1);
+	(1, 'Quan ly user ', 'ROLE_USER', 'Quản lý User', 2, '/user', 1),
+	(2, 'function', 'ROLE_FUNCTION', 'Chức năng', 3, '/function', 1),
+	(3, 'role', 'ROLE_ROLE', 'Quyền hạn', 4, '/role', 1),
+	(4, 'Home', 'ROLE_HOME', 'Trang chủ', 1, '/home', 1);
 /*!40000 ALTER TABLE `tbl_function` ENABLE KEYS */;
 
 -- Dumping structure for table login_exam.tbl_role
@@ -73,7 +74,8 @@ INSERT INTO `tbl_role_function` (`role_id`, `function_id`) VALUES
 	(1, 1),
 	(1, 2),
 	(2, 2),
-	(2, 3);
+	(1, 3),
+	(1, 4);
 /*!40000 ALTER TABLE `tbl_role_function` ENABLE KEYS */;
 
 -- Dumping structure for table login_exam.tbl_role_user
@@ -91,7 +93,7 @@ DELETE FROM `tbl_role_user`;
 /*!40000 ALTER TABLE `tbl_role_user` DISABLE KEYS */;
 INSERT INTO `tbl_role_user` (`user_id`, `role_id`) VALUES
 	(1, 1),
-	(2, 2);
+	(3, 2);
 /*!40000 ALTER TABLE `tbl_role_user` ENABLE KEYS */;
 
 -- Dumping structure for table login_exam.tbl_user
@@ -103,14 +105,14 @@ CREATE TABLE IF NOT EXISTS `tbl_user` (
   `status` int(11) DEFAULT NULL,
   `user_name` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`user_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Dumping data for table login_exam.tbl_user: ~2 rows (approximately)
 DELETE FROM `tbl_user`;
 /*!40000 ALTER TABLE `tbl_user` DISABLE KEYS */;
 INSERT INTO `tbl_user` (`user_id`, `full_name`, `gender`, `password`, `status`, `user_name`) VALUES
-	(1, 'admin', 1, '$2a$10$wN5c2s4H1YljuBATZfUideupq7g3qpcRIpl2sMdMNo77Lu/ZKSxfS', 1, 'admin'),
-	(2, 'user', 2, '$2a$10$..s/NOwmD4AtBvL4k28FFu.kPdffgCBsNeLJU57MDTtXKAaFOuA/a', 1, 'user');
+	(1, 'admin', 1, '$2a$10$uR1Vp5Cu/Pb9J.mzXCxT8.0FTOWp.kQPfY.dbzYc0aDjbw5oKydtW', 1, 'admin'),
+	(3, 'user', 1, '$2a$10$kuP.dmA6jEirYGsST4NpmONUec2kYTiAKSa5nrdYzkeb.j8fMIVJW', 1, 'user');
 /*!40000 ALTER TABLE `tbl_user` ENABLE KEYS */;
 
 -- Dumping structure for table login_exam.token
