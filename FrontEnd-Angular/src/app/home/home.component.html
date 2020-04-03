@@ -1,0 +1,58 @@
+<div style="text-align: center">
+    <h2>HomeComponent</h2>
+    <div  *ngFor="let function of functions">
+        <h2> <a [routerLink]="function.functionURL">{{ function.functionName }}</a> <br><br> </h2>
+    </div>
+    <h2> <a (click)="openModal()" data-toggle="modal" data-target="#myModal">Đổi mật khẩu</a> <br><br> </h2>
+    <h2> <a [routerLink]="['/logout']">Logout</a> <br><br> </h2>
+
+</div>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form [formGroup]="functionupdateform" #updstu (ngSubmit)="changePassword()">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" style="text-align: center">Change Password</h4>
+
+                </div>
+
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <div [hidden]="isupdated">
+
+                        <label for="status">Mật khẩu cũ</label>
+                        <div class="form-group">
+                            <input type="password" class="form-control" formControlName="newPassword" [(ngModel)]="pass.oldPassword"
+                                required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">mật khẩu mới</label>
+                            <input type="password" class="form-control" formControlName="newPassword"
+                                [(ngModel)]="pass.newPassword" required >
+                        </div>
+                        <div class="form-group">
+                            <label for="functionCode">Nhập lại</label>
+                            <input type="password" class="form-control" formControlName="rePassword"
+                                [(ngModel)]="pass.rePassword" required>
+                        </div>
+                        
+                    </div>
+                    <div [hidden]="!isupdated">
+                        <h4> Updated!</h4>
+                    </div>
+
+                </div>
+
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success" [hidden]="isupdated">Update</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal"
+                        (click)="changeisUpdate()">Close</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

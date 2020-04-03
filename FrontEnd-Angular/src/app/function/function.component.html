@@ -1,0 +1,120 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 style="text-align: center">Function</h1><br>
+    <div class="row" [hidden]="!deleteMessage">
+
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <div class="alert alert-info alert-dismissible">
+          <button type="button" class="close" data-dismiss="alert">×</button>
+          <strong>Function Data Deleted</strong>
+        </div>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+
+
+  <div class="panel-body">
+    <button (click)="create()" class='btn btn-info mb-5' data-toggle="modal"
+    data-target="#myModal">Thêm mới</button>
+    <table datatable [dtOptions]="dtOptions" class="row-border hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Status</th>
+          <th>Func Name</th>
+          <th>Description</th>
+          <th>functionURL</th>
+          <th>FunctionOrder</th>
+          <th>functionCode</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let function of functions">
+          <td>{{ function.functionID }}</td>
+          <td>{{ function.status }}</td>
+          <td>{{ function.functionName }}</td>
+          <td>{{ function.description }}</td>
+          <td>{{ function.functionURL }}</td>
+          <td>{{ function.functionOrder }}</td>
+          <td>{{ function.functionCode }}</td>
+          <td>
+            <button (click)="delete(function)" class='btn btn-primary'><i class="fa fa-futboll-0">Delete</i></button>&nbsp;
+            <button (click)="update(function)" class='btn btn-info' data-toggle="modal"
+              data-target="#myModal">Update</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <form [formGroup]="functionupdateform" #updstu (ngSubmit)="updatefunction(function)">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title" style="text-align: center">Update function</h4>
+
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div [hidden]="isupdated">
+
+            <input type="hidden" class="form-control" formControlName="functionID" [(ngModel)]="this.function.functionID" required>
+
+
+            <div class="form-group">
+              <label for="functionName">Tên quyền</label>
+              <input type="text" class="form-control" formControlName="functionName" [(ngModel)]="function.functionName" required>
+            </div>
+
+            <div class="form-group">
+              <label for="status">Hoạt động</label>
+              <select class="form-control" formControlName="status" [(ngModel)]="function.status " name="status" required>
+                <option value=1 [selected]="1 == function.status">Hoạt động</option>
+                <option value=2 [selected]="2 == function.status">Không hoạt động</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="description">Mô tả</label>
+              <input type="text" class="form-control" formControlName="description" [(ngModel)]="function.description"
+                name="description">
+            </div>
+            <div class="form-group">
+              <label for="functionCode">Code</label>
+              <input type="text" class="form-control" formControlName="functionCode" [(ngModel)]="function.functionCode"
+                name="functionCode" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Thứ tự</label>
+              <input type="number" class="form-control" formControlName="functionOrder" [(ngModel)]="function.functionOrder"
+                name="functionOrder" required>
+            </div>
+            <div class="form-group">
+              <label for="name">Url</label>
+              <input type="text" class="form-control" formControlName="functionURL" [(ngModel)]="function.functionURL"
+                name="functionOrder" required>
+            </div>
+          </div>
+          <div [hidden]="!isupdated">
+            <h4>Student Detail Updated!</h4>
+          </div>
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-success" [hidden]="isupdated">Update</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal" (click)="changeisUpdate()">Close</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
