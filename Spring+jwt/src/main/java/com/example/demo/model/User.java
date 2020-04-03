@@ -119,7 +119,7 @@ public class User {
              for (Function f : r.getFunction()) {
                         boolean isDuplicate = false;
                         for(GrantedAuthority au : authorities){
-                            if(au.getAuthority() == f.getFunctionCode()){
+                            if(au.getAuthority() == f.getFunctionCode() || f.getStatus()==2){
                                 isDuplicate = true;
                             }
                         } 

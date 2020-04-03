@@ -23,6 +23,9 @@ export class FunctionService {
   delete(role: object): Observable<any> {  
     return this.http.post(`${this.baseUrl}`+`delete`, role);  
   }  
+  getCurrentFunction(token): Observable<any> {  
+    return this.http.post(`${this.baseUrl}`+`getCurrentFunction`, token);  
+  }  
   
   // getStudent(id: number): Observable<Object> {  
   //   return this.http.get(`${this.baseUrl}/student/${id}`);  

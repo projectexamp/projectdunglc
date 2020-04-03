@@ -20,8 +20,6 @@ public interface UserService {
 
 	public boolean checkLogin(User user);
         
-        public List<Function> getCurrentFunction(String token); 
-        
 	public boolean update(User user);
 
 	public boolean chagePass(User user);

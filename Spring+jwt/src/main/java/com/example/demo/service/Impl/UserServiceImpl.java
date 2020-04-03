@@ -189,28 +189,7 @@ public class UserServiceImpl implements UserService {
         return userRepository.findAll();
     }
 
-    @Override
-    public List<Function> getCurrentFunction(String token) {
-        String username = jwtService.getUsernameFromToken(token);
-        List<Function> functions = new ArrayList<Function>();
-        User user = loadUserByUsername(username);
-        if (user != null && user.getRole() != null && user.getRole().size() > 0) {
-            for (Role r : user.getRole()) {
-                if (r.getFunction() != null && r.getFunction().size() > 0) {
-                    for (Function f : r.getFunction()) {
-                        boolean isDuplicate = false;
-                        for(Function fc :functions){
-                            if(fc.getFunctionID() == f.getFunctionID() ){
-                                isDuplicate = true;
-                            }
-                        } 
-                        if (!isDuplicate) functions.add(f);
-                    }
-                }
-            }
-        }
-        return functions;
-    }
+   
     
 
 }

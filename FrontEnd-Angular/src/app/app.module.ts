@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import {TableModule} from 'primeng/table';
 import { UserComponent } from './user/user.component';
+import { ErrorInterceptor } from './classes/error-interceptor';
 @NgModule({
   declarations: [
     AppComponent,
@@ -88,6 +89,7 @@ import { UserComponent } from './user/user.component';
     LoginService,
     AuthGaurdService,
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
   ],
   bootstrap: [AppComponent]
 })

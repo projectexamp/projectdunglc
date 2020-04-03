@@ -8,6 +8,7 @@ import { LoginService } from '../services/login.service';
 import { User } from '../classes/user';
 import { Function } from '../classes/function';
 import { UserService } from '../user/user.service';
+import { FunctionService } from '../function/function.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -15,7 +16,7 @@ import { UserService } from '../user/user.service';
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute, private router: Router, private toastr: ToastrService, private loginService: LoginService, private userService: UserService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private toastr: ToastrService, private loginService: LoginService, private functionService: FunctionService) { }
   currentUser: User = new User();
   pass: any = {};
   user: User = new User();
@@ -25,7 +26,7 @@ export class HomeComponent implements OnInit {
   }
 
   async getMenufromToken() {
-    this.userService.getCurrentFunction(localStorage.getItem('token')).subscribe(result => {
+    this.functionService.getCurrentFunction(localStorage.getItem('token')).subscribe(result => {
       this.functions = result;
       console.log(this.functions);
     }, error => {

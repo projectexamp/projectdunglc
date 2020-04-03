@@ -33,7 +33,14 @@ public class FunctionController {
         return ResponseEntity.ok(functionService.save(func));
 
     }
+    
+    
+    @RequestMapping(value = "/getCurrentFunction", method = RequestMethod.POST)
+    public ResponseEntity save(@RequestBody String token) {
+        return ResponseEntity.ok(functionService.getCurrentFunction(token));
 
+    }
+    
     @Secured("ROLE_FUNCTION")
     @RequestMapping(value = "/delete", method = RequestMethod.POST)
     public ResponseEntity delete(@RequestBody Function func) {

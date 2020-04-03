@@ -22,9 +22,5 @@ export class UserService {
   delete(user: object): Observable<any> {  
     return this.http.post(`${this.baseUrl}`+`delete`, user);  
   }  
-
-  getCurrentFunction(token): Observable<any> {  
-    return this.http.post(`${this.baseUrl}`+`getCurrentFunction`, token);  
-  }  
   
 }

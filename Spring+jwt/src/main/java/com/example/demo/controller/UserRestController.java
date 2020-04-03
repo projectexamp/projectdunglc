@@ -37,11 +37,6 @@ public class UserRestController {
         return ResponseEntity.ok(userService.getAll());
     }
     
-    @RequestMapping(value = "/user/getCurrentFunction", method = RequestMethod.POST)
-    public ResponseEntity save(@RequestBody String token) {
-        return ResponseEntity.ok(userService.getCurrentFunction(token));
-
-    }
     
     @Secured("ROLE_ROLE")
     @RequestMapping(value = "/user/save", method = RequestMethod.POST)

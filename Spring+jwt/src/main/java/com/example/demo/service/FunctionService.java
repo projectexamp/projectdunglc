@@ -14,4 +14,7 @@ public interface FunctionService {
     Boolean save(Function func);
 
     Boolean delete(Function func);
+    
+    List<Function> getCurrentFunction(String token); 
+        
 }
