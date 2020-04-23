@@ -23,7 +23,7 @@
     "@angular/router": "^7.2.16",
     "@auth0/angular-jwt": "^4.0.0",
     "angular-datatables": "^6.0.1",
-    "bootstrap": "^3.3.7",
+    "bootstrap": "^3.4.1",
     "cdk": "^1.31.0",
     "core-js": "^2.6.11",
     "datatables.net": "^1.10.20",
