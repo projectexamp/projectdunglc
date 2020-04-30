@@ -30,7 +30,7 @@
     "datatables.net-dt": "^1.10.20",
     "flx-ui-datatable": "^1.1.5",
     "font-awesome": "^4.7.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "meteor-node-stubs": "^0.4.1",
     "ng-multiselect-dropdown": "^0.2.10",
     "ngx-toastr": "^10.0.4",
