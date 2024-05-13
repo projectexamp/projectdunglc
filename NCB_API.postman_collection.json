@@ -1,0 +1,483 @@
+{
+	"info": {
+		"_postman_id": "788c3f6f-cead-4a3e-8115-aa062ab088ba",
+		"name": "NCB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4025154"
+	},
+	"item": [
+		{
+			"name": "hanche",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "e62ef389-d32a-4606-ba43-db49b1566d3b",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"1111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/getListFraudulenceCustomer",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"getListFraudulenceCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Khden",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"customerName\":\"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/getListBlackListCustomer",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"getListBlackListCustomer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC timKiemKHCIC",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"SoCMT\": \"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/timKiemKHCIC",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"timKiemKHCIC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC checkListRequestInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"channel\": \"CIC\",\r\n    \"param4\": \"1\",\r\n    \"param5\": \"R11A\",\r\n    \"param6\": \"MaCIC:7932972831\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/checkListRequestInfo",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"checkListRequestInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC createCICRequestMultiple",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \r\n    \"flag\": \"1\",\r\n    \"maker\": \"vinhnc5\",\r\n    \"param1\": \"cicCode:7932703461;customerType:1;customerName:(trÆ°Æ¡ng minh hiá»‡p);idNo:7932703461;registerNo:7932703461;taxCode:;address:cic code;msgId:null;productCode:S10A,cicCode:7932703461;customerType:1;customerName:(trÆ°Æ¡ng minh hiá»‡p);idNo:7932703461;registerNo:7932703461;taxCode:;address:cic code;msgId:QZWvNdCTxALYMLZNSLKjsYIZmLswbEeqOmEzydamrYXyTuUpQHCYYRcCkOspihKLmQXKo;productCode:R14.DN\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/createCICRequestMultiple",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"createCICRequestMultiple"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC getListCisRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n\t\"channel\": \"CIC\", \r\n\t\"customerName\": \"7934693387\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/getListCisRequest",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"getListCisRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC reportPdfCIC",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cisNo\": \"7828\",\r\n    \"productCode\": \"S11A1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/reportPdfCIC",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"reportPdfCIC"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CIC getCisResponseInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"cisNo\": \"7828\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/getCisResponseInfo",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"getCisResponseInfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PCB getListCisRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n\t\"channel\": \"PCB\", \r\n    \"status\" : \"SENDED_ERROR\",\r\n\t\"customerName\": \"123456789\",\r\n\t\"fromDate\": \"01/04/2023\",\r\n\t\"toDate\": \"30/05/2024\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/getListCisRequest",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"getListCisRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PCB createPCBRequest",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"channel\" :\"PCB\",\r\n\"msgId\": \"HkxDAulIgRIuqOyODHjmEuvZxeUEvzCWLyfpCqBhOIGKDTmSDyxHeTbFPRIwtofsPoksF\",\r\n\"productCode\": \"PCB_CN\",\r\n\"customerName\":\"Nguyễn Cảnh Vinh\",\r\n\"gender\": \"M\",\r\n\"dob\": \"09/04/1990\",\r\n\"idNo\": \"999999999\",\r\n\"docType\": \"\",\r\n\"registerNo\": \"\",\r\n\"address\": \"Hà Nội\",\r\n\"borrower\": \"1\",\r\n\"pcbCode\": \"\",\r\n\"operationType\": \"31\",\r\n\"amountFinCapital\": \"20000\",\r\n\"totalInstalment\": \"2\",\r\n\"creditLimit\": 10000,\r\n\"customerType\": \"2\",\r\n\"ccy\":\"VND\",\r\n\t\"countryOfBirth\":\"VN\",\r\n\t\"payPeriodicity\":\"M\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/createPCBRequest",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"createPCBRequest"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PCB checkListRequestInfo",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"channel\": \"PCB\",\r\n    \"param5\": \"PCB_CN\",\r\n    \"param6\": \"socmt:745287276\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.14.106.70:7002/api/bank/checkListRequestInfo",
+					"protocol": "http",
+					"host": [
+						"10",
+						"14",
+						"106",
+						"70"
+					],
+					"port": "7002",
+					"path": [
+						"api",
+						"bank",
+						"checkListRequestInfo"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
