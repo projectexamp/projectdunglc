@@ -1,3 +1,11 @@
+
+ -- datnd 15
+               case when p_user is not null and exists(select * from cis_request_email xx where xx.cis_no=CIS_REQUEST.cis_no and xx.created_user=p_user) then 1
+                
+                  when p_user is null and exists(select * from cis_request_email xx where xx.cis_no=CIS_REQUEST.cis_no and xx.created_user=CIS_REQUEST.MAKER) then 1
+                 
+                 else 0 end as FLAG,
+
 1 Kiểm tra Khách hàng từng hỏi tin 
 a. Thể nhân S11A- 159696872
 b. Pháp nhân - S10A - DKKD - 1125K
