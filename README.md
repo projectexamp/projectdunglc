@@ -52,3 +52,7 @@ b. phap nhan - S10A, R14.DN, MST: 912381000111
     "countryOfBirth": "VN",
     "payPeriodicity": "M"
 }
+
+
+update SYS_TOKEN set EXPIRI_DATE =to_timestamp('01-JAN-25 08.01.23.459000000 AM','DD-MON-RR HH.MI.SSXFF AM')
+where token = 'eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhcHBsaWNhdGlvbnMiLCJleHAiOjIyNjQ2NDY4NDUsImlhdCI6MTYzMzkyNjg0NX0.aXhXRaTazpWqAKIRnFsuaFniAEfm75O3J_Z9rmsUC3ptAn-oeU1S_1P1mKzESbKFTk3qXsZ2dNyqYulxwIKE_g'
